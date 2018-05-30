@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/cosmo/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="funcions.js"></script>
+    <title>Pràctica 14</title>
+</head>
+<body>
+    <div class="container">    
+        <form id="formulari" onsubmit="return false">            
+            <div class="form-group">
+                <label for="nomCurs">Nom del curs:</label>
+                <input type="text" class="form-control" id="nomCurs" required>
+            </div>
+            <div class="form-group">
+                <label for="tipusCurs">Tipus de curs:</label>
+                <input type="text" class="form-control" id="tipusCurs" required>
+            </div>
+            <div class="form-group">
+                <label for="nomProf">Nom del professor:</label>
+                <input type="text" class="form-control" id="nomProf" required>
+            </div>
+            <div class="form-group">
+                <label for="dataInici">Data d'inici:</label>
+                <input type="date" class="form-control" id="dataInici" required>
+            </div>
+            <div class="form-group">
+                <label for="dataFi">Data de fi:</label>
+                <input type="date" class="form-control" id="dataFi" required>
+            </div>
+            <div class="form-group">
+                <label for="hores">Hores:</label>
+                <input type="number" class="form-control" id="hores" min="0" max="1000" required>
+            </div>
+            <button type="submit" class="btn btn-default" id="submit">Enviar</button>
+        </form>
+        <h1>Resultat de la cerca:</h1>
+        <div class ="form-group">
+        <table class="table table-striped" id="table"><!--Taula buida on es posen els resultats de la recerca-->
+           <thead>
+                <tr>
+                    <th>Nom del curs</th>
+                    <th>Tipus de curs</th>
+                    <th>Nom del professor</th>
+                    <th>Data inici</th>
+                    <th>Duració curs</th>
+                    <th>Total hores</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable">
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
